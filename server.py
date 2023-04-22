@@ -30,7 +30,7 @@ def server_receive():
         print("Nickname is {}".format(NICK))
         names.append(NICK)
         hosts.append(client_sock)
-        send_to_all("{} is here".format(NICK).encode('ascii'))
+        broadcast("{} is here".format(NICK).encode('ascii'))
         client_sock.send('Connected to server'.encode('ascii'))
         thread = threading.Thread(target=get_message,args=(client_sock,))
         thread.start()

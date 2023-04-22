@@ -13,7 +13,7 @@ sock.connect((HOST,PORT))
 
 # Подготовим HTTP-запрос
 def sock_send():
-    data = input('Nick : ').encode('ascii')
+    data = input('Enter your nick : ').encode('ascii')
     sock.sendall(data)
 
 def sock_recieve():
