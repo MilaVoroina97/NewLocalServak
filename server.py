@@ -37,7 +37,7 @@ def server_receive():
 
 # Функиция для отправки сообщения всем хостам:
 
-def send_to_all(data):
+def broadcast(data):
     for host in hosts:
         host.send(data)
 
@@ -46,6 +46,6 @@ def send_to_all(data):
 def get_message(host):
     while True:
         data = host.recv(1024)
-        send_to_all(data)
+        broadcast(data)
 
 server_receive()
