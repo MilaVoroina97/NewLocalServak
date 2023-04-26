@@ -4,14 +4,13 @@ import socket, threading
 # Открываем сокет
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-HOST = '127.0.0.1'
-PORT = 55555
+HOST = '192.168.0.2'
+PORT = 23456
 
 # Коннектимся
-def sock_connect(): 
-    sock.connect((HOST,PORT))
 
-sock_connect()
+sock.connect((HOST,PORT))
+
 # Подготовим HTTP-запрос
 def sock_send():
     data = input('Enter your nick : ').encode('ascii')
