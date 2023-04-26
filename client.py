@@ -8,9 +8,10 @@ HOST = '127.0.0.1'
 PORT = 55555
 
 # Коннектимся
+def sock_connect(): 
+    sock.connect((HOST,PORT))
 
-sock.connect((HOST,PORT))
-
+sock_connect()
 # Подготовим HTTP-запрос
 def sock_send():
     data = input('Enter your nick : ').encode('ascii')
