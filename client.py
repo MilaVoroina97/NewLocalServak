@@ -22,11 +22,6 @@ def sock_recieve():
         data_in = sock.recv(1024)
         print(data_in.decode('ascii'))
 
-def host_connect():
-    while True:
-        data_to_host = sock.connect()
-        print(data_to_host)
-
 sock_send()
 
 rec_thread = threading.Thread(target=sock_recieve)
